@@ -10,7 +10,7 @@
     "destination_airport": null,
     "origin_airport_basis": "User's default destination for outbound travel; not visible in screenshots"
   },
-  "currency": null,
+  "currency": "CAD",
   "currency_symbol": "$",
   "airline": null,
   "fare_basis": null,
@@ -19,7 +19,7 @@
   "stops": null,
   "notes": [
     "Transcribed from four return-date calendar screenshots supplied by user.",
-    "Currency, airline, airports, one-way versus round-trip, passenger count, taxes and baggage are not visible and are unconfirmed.",
+    "Airline, airports, one-way versus round-trip, passenger count, taxes and baggage are not visible and are unconfirmed.",
     "The selected outbound date and any dependency of return prices on that selection are unconfirmed. Do not assume these are independently bookable return fares or add them to outbound prices as a confirmed trip total.",
     "recorded_on is the transcription date, not a confirmed screenshot capture date.",
     "Null price means no price shown; it does not establish flight unavailability.",
@@ -1728,5 +1728,6 @@
       "status": "no_price_shown",
       "source_image": "image(7).png"
     }
-  ]
+  ],
+  "currency_basis": "Confirmed by user"
 }

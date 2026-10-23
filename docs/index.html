@@ -15,12 +15,12 @@
 <label>Trip length<select id="length"><option value="5-7">5–7 nights</option><option value="7-14">7–14 nights</option></select></label>
 <label>Depart on or after<input id="from" type="date"></label>
 <label>Depart on or before<input id="to" type="date"></label>
-<label>Maximum estimated total ($)<input id="budget" type="number" min="0" step="1" placeholder="Any budget"></label>
+<label>Maximum estimated total (CAD)<input id="budget" type="number" min="0" step="1" placeholder="Any budget"></label>
 <label>Sort results<select id="sort"><option value="price">Lowest total first</option><option value="date">Earliest departure</option><option value="nights">Shortest trip</option></select></label>
 </div><p class="notice">Trip lengths include both endpoints (7 nights appears in both ranges). Only dates with recorded prices are included. <button id="reset" type="button">Reset filters</button></p></section>
 <section class="best" aria-live="polite"><div class="summary"><div><h2>Lowest estimated total</h2><strong id="best">Loading…</strong><p id="bestDates"></p></div><p id="count"></p></div></section>
-<section><h2>Compare trips</h2><p class="notice">Estimated total = displayed departure price + displayed return price. These combinations have not been verified as bookable fares. Currency and fare conditions are unconfirmed; return prices may depend on the original departure selection. Route airports are not shown in the screenshots (Liberia is the intended destination).</p>
+<section><h2>Compare trips</h2><p class="notice">Estimated total = displayed departure price + displayed return price. These combinations have not been verified as bookable fares. All prices are in CAD. return prices may depend on the original departure selection. Route airports are not shown in the screenshots (Liberia is the intended destination).</p>
 <p id="error" role="alert"></p><div class="scroll"><table><thead><tr><th scope="col">Departure</th><th scope="col">Return</th><th scope="col">Nights</th><th scope="col">Outbound</th><th scope="col">Return</th><th scope="col">Estimated total</th></tr></thead><tbody id="results"></tbody></table></div>
 <div class="pager"><button id="prev" type="button">Previous</button><span id="page" aria-live="polite"></span><button id="next" type="button">Next</button></div></section>
-<footer>Source: calendar screenshots recorded October 22, 2026. Screenshot capture date unconfirmed. These are saved observations, not live prices.</footer>
+<footer>Prices in Canadian dollars (CAD). Source: calendar screenshots recorded October 22, 2026. Screenshot capture date unconfirmed. These are saved observations, not live prices.</footer>
 </main></body></html>

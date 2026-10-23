@@ -9,7 +9,7 @@
     "destination_airport": "LIR",
     "destination_airport_basis": "User's default destination; not visible in screenshots"
   },
-  "currency": null,
+  "currency": "CAD",
   "currency_symbol": "$",
   "airline": null,
   "fare_basis": null,
@@ -17,7 +17,7 @@
   "stops": null,
   "notes": [
     "Transcribed from four departure-calendar screenshots supplied by user.",
-    "Currency, airline, airports, one-way versus round-trip, passenger count, taxes and baggage are not visible and are unconfirmed.",
+    "Airline, airports, one-way versus round-trip, passenger count, taxes and baggage are not visible and are unconfirmed.",
     "recorded_on is the transcription date, not a confirmed screenshot capture date.",
     "Null price means no price shown; it does not establish flight unavailability.",
     "October 1–21 appear shaded before the selected October 22 date.",
@@ -1725,5 +1725,6 @@
       "status": "no_price_shown",
       "source_image": "image(3).png"
     }
-  ]
+  ],
+  "currency_basis": "Confirmed by user"
 }
