@@ -60,7 +60,7 @@ if (typeof document !== 'undefined') {
   $('prev').addEventListener('click',()=>{if(page>0){page--;render();}});
   $('next').addEventListener('click',()=>{if((page+1)*size<trips.length){page++;render();}});
   Promise.all(['flight-prices-2026-10-22.json','return-flight-prices-2026-10-22.json'].map(async file=>{
-    const response=await fetch('data/'+file);if(!response.ok)throw new Error('Price data could not be loaded.');return response.json();
+    const response=await fetch('data/'+file, {cache: 'no-store'});if(!response.ok)throw new Error('Price data could not be loaded.');return response.json();
   })).then(([out,back])=>{
     outbound=out.observations.filter(r=>Number.isFinite(r.price)).sort((a,b)=>a.departure_date.localeCompare(b.departure_date));
     inbound=back.observations; if(!outbound.length)throw new Error('No departure prices available.');

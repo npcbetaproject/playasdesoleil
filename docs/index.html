@@ -11,10 +11,10 @@ main{padding:14px 20px}section{padding:14px 16px;margin-bottom:12px;border-radiu
 @media(max-width:800px){header{gap:6px 14px}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.best .summary>div{gap:8px}}
 @media(max-width:480px){main{padding:10px}section{padding:10px}header h1{font-size:20px}header span{width:100%}th,td{padding:7px}.breakdown{margin-left:4px}}
 </style>
-<script src="app.js?v=20261022-compact" defer></script>
+<script src="app.js?v=20261022-refresh1" defer></script>
 </head>
 <body>
-<header><small>Playas de Soleil</small><h1>Costa Rica Trip Finder</h1><span>Toronto ↔ Costa Rica · Prices in CAD</span></header>
+<header><small>Playas de Soleil</small><h1>Costa Rica Trip Finder</h1><span>Toronto (YYZ) ↔ Liberia (LIR) · CAD per guest</span></header>
 <main>
 <section aria-label="Trip filters"><div class="filters">
 <label>Trip length<select id="length"><option value="5-7">5–7 nights</option><option value="7-14">7–14 nights</option></select></label>
@@ -27,5 +27,5 @@ main{padding:14px 20px}section{padding:14px 16px;margin-bottom:12px;border-radiu
 <section><h2>Compare trips</h2><p class="notice">Total (outbound-return), in CAD. Saved calendar prices; not live fares.</p>
 <p id="error" role="alert"></p><div class="scroll"><table><thead><tr><th scope="col" title="Nights between departure and return">Days</th><th scope="col">Departure Date</th><th scope="col">Return Date</th><th scope="col">Round-trip total</th></tr></thead><tbody id="results"></tbody></table></div>
 <div class="pager"><button id="prev" type="button">Previous</button><span id="page" aria-live="polite"></span><button id="next" type="button">Next</button></div></section>
-<footer>Prices in Canadian dollars (CAD). Source: calendar screenshots recorded October 22, 2026. Screenshot capture date unconfirmed. These are saved observations, not live prices.</footer>
+<footer>Source: WestJet calendars · Refreshed October 22, 2026 · CAD, one-way per guest; totals combine both directions. Saved prices, subject to change.</footer>
 </main></body></html>
