@@ -70,6 +70,13 @@ if (typeof document !== 'undefined') {
     outbound=out.observations.filter(r=>Number.isFinite(r.price)).sort((a,b)=>a.departure_date.localeCompare(b.departure_date));
     inbound=back.observations; if(!outbound.length)throw new Error('No departure prices available.');
     for(const id of ['from','to']) {$(id).min=outbound[0].departure_date;$(id).max=outbound[outbound.length-1].departure_date;}
+    const range = document.getElementById('dataRange');
+    if (range) {
+      const returnDates = inbound.filter(r => Number.isFinite(r.price)).map(r => r.return_date).sort();
+      range.textContent = 'Available departures: ' + date(outbound[0].departure_date) + '–' + date(outbound[outbound.length-1].departure_date)
+        + (returnDates.length ? ' · Returns through ' + date(returnDates[returnDates.length-1]) : '')
+        + '. Date filters apply to departure dates';
+    }
     reset();
   }).catch(error=>{$('error').textContent=error.message+' Please reload the page.';$('best').textContent='Prices unavailable';});
 }
