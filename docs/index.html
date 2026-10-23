@@ -5,22 +5,27 @@
 <title>Costa Rica Trip Finder | Playas de Soleil</title>
 <style>
 :root{font-family:system-ui,sans-serif;color:#153d42;background:#f3f7f6}*{box-sizing:border-box}body{margin:0}header{background:#103f46;color:white;padding:42px max(24px,calc((100vw - 1150px)/2)) 48px}header small{color:#a2e2cf;letter-spacing:.14em;text-transform:uppercase}h1{font-size:clamp(30px,5vw,48px);margin:12px 0}header p{color:#c9e1e0;max-width:700px;line-height:1.6}main{max-width:1200px;margin:0 auto;padding:26px 24px}section{background:white;border:1px solid #dce8e5;border-radius:16px;padding:24px;margin-bottom:22px}.filters{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600}input,select,button{font:inherit;padding:11px;border:1px solid #b8cfcb;border-radius:8px;background:white;color:#153d42;min-width:0}button{cursor:pointer}button:hover{background:#e2f5ed}input:focus,select:focus,button:focus{outline:3px solid #7ccfb2;outline-offset:2px}.notice{font-size:14px;line-height:1.65;color:#526b6d}.summary{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.best{background:#e5f5eb;border-color:#b5ddc7}.best strong{font-size:32px;color:#176549}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;white-space:nowrap;font-size:15px}th,td{text-align:left;padding:15px 12px;border-bottom:1px solid #e4eeeb}th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#56706f}tbody tr:first-child{background:#eef8f2}td:last-child{font-weight:700;color:#176549}.pager{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:22px}h2{margin:0 0 10px;font-size:22px}footer{font-size:13px;color:#607775;padding:0 0 30px}#error{color:#9a3030} @media(max-width:800px){.filters{grid-template-columns:1fr 1fr}}@media(max-width:480px){.filters{grid-template-columns:1fr}section{padding:18px}main{padding:18px 12px}}
+
+header{padding:14px max(20px,calc((100vw - 1150px)/2));display:flex;align-items:center;gap:18px;flex-wrap:wrap}header h1{font-size:23px;margin:0}header small{font-size:11px}header span{font-size:13px;color:#c9e1e0}
+main{padding:14px 20px}section{padding:14px 16px;margin-bottom:12px;border-radius:10px}.filters{gap:12px}label{gap:5px;font-size:12px}input,select,button{padding:7px 9px;font-size:14px}.notice{font-size:12px;line-height:1.4;margin:8px 0}.notice button{padding:4px 8px;margin-left:8px}.summary{gap:10px}.best .summary>div{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.best h2{font-size:14px;margin:0}.best strong{font-size:23px}.best p{font-size:13px;margin:0}h2{font-size:17px;margin:0 0 6px}th,td{padding:8px 10px}table{font-size:14px}td:last-child{font-weight:400}td:last-child strong{font-weight:750}.breakdown{font-size:12px;color:#607775;margin-left:7px}.pager{margin-top:12px;gap:12px;font-size:13px}footer{font-size:11px;padding-bottom:12px}#error:empty{display:none}
+@media(max-width:800px){header{gap:6px 14px}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.best .summary>div{gap:8px}}
+@media(max-width:480px){main{padding:10px}section{padding:10px}header h1{font-size:20px}header span{width:100%}th,td{padding:7px}.breakdown{margin-left:4px}}
 </style>
-<script src="app.js?v=20261022-fix1" defer></script>
+<script src="app.js?v=20261022-compact" defer></script>
 </head>
 <body>
-<header><small>Playas de Soleil · Trip planner</small><h1>Find your Costa Rica escape.</h1><p>Compare departure and return calendar prices to find the lowest round-trip combinations from Toronto to Costa Rica.</p></header>
+<header><small>Playas de Soleil</small><h1>Costa Rica Trip Finder</h1><span>Toronto ↔ Costa Rica · Prices in CAD</span></header>
 <main>
 <section aria-label="Trip filters"><div class="filters">
 <label>Trip length<select id="length"><option value="5-7">5–7 nights</option><option value="7-14">7–14 nights</option></select></label>
-<label>Depart on or after<input id="from" type="date"></label>
-<label>Depart on or before<input id="to" type="date"></label>
-<label>Maximum round-trip total (CAD)<input id="budget" type="number" min="0" step="1" placeholder="Any budget"></label>
+<label>Departure from<input id="from" type="date"></label>
+<label>Departure to<input id="to" type="date"></label>
+<label>Max total (CAD)<input id="budget" type="number" min="0" step="1" placeholder="Any budget"></label>
 <label>Sort results<select id="sort"><option value="price">Lowest total first</option><option value="date">Earliest departure</option><option value="nights">Shortest trip</option></select></label>
-</div><p class="notice">Trip lengths include both endpoints (7 nights appears in both ranges). Only dates with recorded prices are included. <button id="reset" type="button">Reset filters</button></p></section>
+</div><p class="notice">Length = nights away. 7 is included in both ranges. <button id="reset" type="button">Reset filters</button></p></section>
 <section class="best" aria-live="polite"><div class="summary"><div><h2>Lowest round-trip total</h2><strong id="best">Loading…</strong><p id="bestDates"></p></div><p id="count"></p></div></section>
-<section><h2>Compare trips</h2><p class="notice">Round-trip total = displayed departure price + displayed return price. Each recorded price is the total booking price for that direction, confirmed by the owner. All prices are in CAD. Route airports are not shown in the screenshots (Liberia is the intended destination).</p>
-<p id="error" role="alert"></p><div class="scroll"><table><thead><tr><th scope="col">Departure</th><th scope="col">Return</th><th scope="col">Nights</th><th scope="col">Outbound</th><th scope="col">Return</th><th scope="col">Round-trip total</th></tr></thead><tbody id="results"></tbody></table></div>
+<section><h2>Compare trips</h2><p class="notice">Total (outbound-return), in CAD. Saved calendar prices; not live fares.</p>
+<p id="error" role="alert"></p><div class="scroll"><table><thead><tr><th scope="col" title="Nights between departure and return">Days</th><th scope="col">Departure Date</th><th scope="col">Return Date</th><th scope="col">Round-trip total</th></tr></thead><tbody id="results"></tbody></table></div>
 <div class="pager"><button id="prev" type="button">Previous</button><span id="page" aria-live="polite"></span><button id="next" type="button">Next</button></div></section>
 <footer>Prices in Canadian dollars (CAD). Source: calendar screenshots recorded October 22, 2026. Screenshot capture date unconfirmed. These are saved observations, not live prices.</footer>
 </main></body></html>

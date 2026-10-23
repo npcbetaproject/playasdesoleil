@@ -19,7 +19,7 @@ function findTrips(outbound, inbound, options) {
 if (typeof module !== 'undefined') module.exports = {findTrips};
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
-  const money = amount => new Intl.NumberFormat('en-CA', {style: 'currency', currency: 'CAD', currencyDisplay: 'code', maximumFractionDigits: 0}).format(amount);
+  const money = amount => 'CAD ' + amount.toLocaleString('en-CA');
   const date = value => new Date(value + 'T00:00:00Z').toLocaleDateString('en-CA',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
   let outbound = [], inbound = [], trips = [], page = 0;
   const size = 30;
@@ -27,12 +27,17 @@ if (typeof document !== 'undefined') {
     const body = $('results'); body.replaceChildren();
     for (const trip of trips.slice(page * size, (page + 1) * size)) {
       const row = document.createElement('tr');
-      for (const value of [date(trip.departure),date(trip.returnDate),trip.nights,money(trip.outbound),money(trip.inbound),money(trip.total)]) {
+      for (const value of [trip.nights,date(trip.departure),date(trip.returnDate)]) {
         const cell = document.createElement('td'); cell.textContent = value; row.append(cell);
       }
+      const priceCell = document.createElement('td');
+      const total = document.createElement('strong'); total.textContent = money(trip.total);
+      const breakdown = document.createElement('span'); breakdown.className = 'breakdown';
+      breakdown.textContent = '(' + trip.outbound + '-' + trip.inbound + ')';
+      priceCell.append(total); priceCell.append(breakdown); row.append(priceCell);
       body.append(row);
     }
-    if (!trips.length) {const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=6;cell.textContent='No trips match. Try a wider departure range or higher budget.';row.append(cell);body.append(row);}
+    if (!trips.length) {const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=4;cell.textContent='No trips match. Try a wider departure range or higher budget.';row.append(cell);body.append(row);}
     const best = trips.reduce((a,b) => !a || b.total < a.total ? b : a, null);
     $('best').textContent = best ? money(best.total) : 'No matching trips';
     $('bestDates').textContent = best ? date(best.departure)+' → '+date(best.returnDate)+' · '+best.nights+' nights' : '';
