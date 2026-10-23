@@ -52,7 +52,7 @@ if (typeof document !== 'undefined') {
     page=0;render();
   }
   function reset() {
-    $('length').value='5-7';$('from').value=outbound[0].departure_date;$('to').value=outbound[outbound.length-1].departure_date;
+    $('length').value='4-7';$('from').value=outbound[0].departure_date;$('to').value=outbound[outbound.length-1].departure_date;
     $('budget').value='';$('sort').value='price';filter();
   }
   for (const id of ['length','from','to','budget','sort']) $(id).addEventListener('input',filter);
