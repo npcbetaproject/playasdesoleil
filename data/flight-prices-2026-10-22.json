@@ -12,12 +12,12 @@
   "currency": "CAD",
   "currency_symbol": "$",
   "airline": null,
-  "fare_basis": null,
+  "fare_basis": "total_booking_price_per_direction",
   "departure_time": null,
   "stops": null,
   "notes": [
     "Transcribed from four departure-calendar screenshots supplied by user.",
-    "Airline, airports, one-way versus round-trip, passenger count, taxes and baggage are not visible and are unconfirmed.",
+    "Airline, airports, passenger count and baggage details are not visible and are unconfirmed.",
     "recorded_on is the transcription date, not a confirmed screenshot capture date.",
     "Null price means no price shown; it does not establish flight unavailability.",
     "October 1–21 appear shaded before the selected October 22 date.",
@@ -1726,5 +1726,6 @@
       "source_image": "image(3).png"
     }
   ],
-  "currency_basis": "Confirmed by user"
+  "currency_basis": "Confirmed by user",
+  "fare_basis_confirmation": "User confirmed each screenshot covers that direction; round-trip total is outbound plus return."
 }
