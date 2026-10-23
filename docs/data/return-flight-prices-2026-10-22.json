@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "recorded_on": "2026-10-22",
-  "refreshed_at": "2026-10-23T01:27:58.333Z",
+  "recorded_on": "2026-10-23",
+  "refreshed_at": "2026-10-23T04:06:12.488Z",
   "source_url": "https://www.westjet.com/en-ca",
   "source_method": "WestJet rendered departure and return calendar text collected with browser",
   "direction": "return",
@@ -17,7 +17,7 @@
   "fare_basis": "total_booking_price_per_direction",
   "price_unit": "one-way per guest",
   "guest_count": 1,
-  "selected_outbound_date": "2026-10-22",
+  "selected_outbound_date": "2026-10-23",
   "departure_time": null,
   "stops": null,
   "notes": [
@@ -25,163 +25,9 @@
     "Round-trip comparison sums outbound and return calendar prices.",
     "Null means no price displayed; it does not establish flight unavailability.",
     "Fares are a saved snapshot, subject to change; baggage and fare class not captured.",
-    "Full calendar horizon reread with discount code 5P2N7EW applied. All 541 displayed fares unchanged from prior scan; discount effect on calendar prices unconfirmed. Future standard refreshes must use no discount code."
+    "Scanned all available departure and return calendar months through September 18, 2027 without a discount code. Return calendar used October 23, 2026 as the selected outbound date."
   ],
   "observations": [
-    {
-      "return_date": "2026-10-01",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-02",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-03",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-04",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-05",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-06",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-07",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-08",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-09",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-10",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-11",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-12",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-13",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-14",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-15",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-16",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-17",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-18",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-19",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-20",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-21",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
-    {
-      "return_date": "2026-10-22",
-      "price": null,
-      "price_display": null,
-      "status": "no_price_shown",
-      "source_url": "https://www.westjet.com/en-ca"
-    },
     {
       "return_date": "2026-10-23",
       "price": 279,
@@ -436,8 +282,8 @@
     },
     {
       "return_date": "2026-11-28",
-      "price": 297,
-      "price_display": "$297",
+      "price": 436,
+      "price_display": "$436",
       "status": "price_shown",
       "source_url": "https://www.westjet.com/en-ca"
     },
@@ -485,8 +331,8 @@
     },
     {
       "return_date": "2026-12-05",
-      "price": 297,
-      "price_display": "$297",
+      "price": 411,
+      "price_display": "$411",
       "status": "price_shown",
       "source_url": "https://www.westjet.com/en-ca"
     },
@@ -534,8 +380,8 @@
     },
     {
       "return_date": "2026-12-12",
-      "price": 297,
-      "price_display": "$297",
+      "price": 411,
+      "price_display": "$411",
       "status": "price_shown",
       "source_url": "https://www.westjet.com/en-ca"
     },
@@ -1227,8 +1073,8 @@
     },
     {
       "return_date": "2027-03-21",
-      "price": 1298,
-      "price_display": "$1298",
+      "price": 1305,
+      "price_display": "$1305",
       "status": "price_shown",
       "source_url": "https://www.westjet.com/en-ca"
     },
@@ -1304,8 +1150,8 @@
     },
     {
       "return_date": "2027-04-01",
-      "price": 575,
-      "price_display": "$575",
+      "price": 674,
+      "price_display": "$674",
       "status": "price_shown",
       "source_url": "https://www.westjet.com/en-ca"
     },
@@ -2501,17 +2347,10 @@
     }
   ],
   "date_range": {
-    "from": "2026-10-22",
+    "from": "2026-10-23",
     "through": "2027-09-18"
   },
   "booking_horizon_end": "2027-09-18",
   "calendar_scan_complete": true,
-  "calendar_end_evidence": "Next Month disabled with August and September 2027 displayed; September 19 onward disabled.",
-  "discount_context": {
-    "code": "5P2N7EW",
-    "scope": "one_time_refresh",
-    "site_status": "Discount code applied (5P2N7EW)",
-    "calendar_discount_confirmed": false,
-    "comparison": "All displayed calendar prices matched the preceding no-code snapshot. Do not describe these fares as confirmed discounted prices."
-  }
+  "calendar_end_evidence": "Next Month disabled with August and September 2027 displayed; September 19 onward disabled."
 }
