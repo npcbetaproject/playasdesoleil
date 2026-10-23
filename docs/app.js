@@ -42,6 +42,22 @@ if (typeof document !== 'undefined') {
     $('best').textContent = best ? money(best.total) : 'No matching trips';
     $('bestDates').textContent = best ? date(best.departure)+' → '+date(best.returnDate)+' · '+best.nights+' nights' : '';
     $('count').textContent = trips.length.toLocaleString()+' matching combinations';
+    const cards = document.getElementById('lengthCards');
+    if (cards) {
+      cards.replaceChildren();
+      const [minNights, maxNights] = $('length').value.split('-').map(Number);
+      for (let nights = minNights; nights <= maxNights; nights++) {
+        const winner = trips.filter(trip => trip.nights === nights).reduce((best, trip) =>
+          !best || trip.total < best.total || (trip.total === best.total && trip.departure < best.departure) ? trip : best, null);
+        const card = document.createElement('article'); card.className = 'price-card';
+        const title = document.createElement('h3'); title.textContent = 'Best ' + nights + '-night trip';
+        const price = document.createElement('strong'); price.textContent = winner ? money(winner.total) : 'No matching trip';
+        if (!winner) price.className = 'no-trip';
+        const dates = document.createElement('p');
+        dates.textContent = winner ? date(winner.departure) + ' → ' + date(winner.returnDate) : 'Try wider dates or a higher budget.';
+        card.append(title); card.append(price); card.append(dates); cards.append(card);
+      }
+    }
     $('page').textContent = trips.length ? 'Page '+(page+1)+' of '+Math.ceil(trips.length/size) : '0 results';
     $('prev').disabled = page===0; $('next').disabled = (page+1)*size>=trips.length;
   }
