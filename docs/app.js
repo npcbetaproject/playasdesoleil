@@ -78,6 +78,12 @@ if (typeof document !== 'undefined') {
   Promise.all(['flight-prices-2026-10-22.json','return-flight-prices-2026-10-22.json'].map(async file=>{
     const response=await fetch('data/'+file, {cache: 'no-store'});if(!response.ok)throw new Error('Price data could not be loaded.');return response.json();
   })).then(([out,back])=>{
+    const discountNote = document.getElementById('discountNote');
+    if (discountNote) {
+      const discount = out.discount_context;
+      discountNote.hidden = !discount;
+      discountNote.textContent = discount ? 'One-time code ' + discount.code + ' was applied on WestJet. Calendar prices were unchanged; a discount in these prices is not confirmed.' : '';
+    }
     const timestamps = [out.refreshed_at, back.refreshed_at].map(value => value ? Date.parse(value) : NaN);
     const stamp = document.getElementById('lastUpdated');
     if (stamp) stamp.textContent = timestamps.every(Number.isFinite)
