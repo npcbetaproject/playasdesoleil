@@ -19,9 +19,9 @@ main{padding:14px 20px}section{padding:14px 16px;margin-bottom:12px;border-radiu
 <header><small>Playas de Soleil</small><h1>Costa Rica Trip Finder <span class="refresh-reminder">“Refresh the flight data and push live.”</span></h1><span>Toronto (YYZ) ↔ Liberia (LIR) · CAD per guest</span><span id="lastUpdated" aria-live="polite">Last updated: loading…</span></header>
 <main>
 <section aria-label="Trip filters"><div class="filters">
-<label>Trip length<select id="length"><option value="4-7">4–7 nights</option><option value="7-14">7–14 nights</option></select></label>
+
 <label>Departure from<input id="from" type="date"></label>
-<label>Departure to<input id="to" type="date"></label>
+<label>Departure to<input id="to" type="date"></label><label>Trip length<select id="length"><option value="4-7">4–7 nights</option><option value="7-14">7–14 nights</option></select></label>
 <label>Max total (CAD)<input id="budget" type="number" min="0" step="1" placeholder="Any budget"></label>
 <label>Sort results<select id="sort"><option value="price">Lowest total first</option><option value="date">Earliest departure</option><option value="nights">Shortest trip</option></select></label>
 </div><p class="notice"><span id="dataRange">Loading available dates…</span> · Length = nights away. 7 is included in both ranges. <button id="reset" type="button">Reset filters</button></p></section>
