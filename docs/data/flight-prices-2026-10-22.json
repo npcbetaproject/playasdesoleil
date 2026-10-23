@@ -1,0 +1,1729 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-22",
+  "screenshot_captured_on": null,
+  "route": {
+    "origin_city": "Toronto",
+    "origin_airport": null,
+    "destination_country": "Costa Rica",
+    "destination_airport": "LIR",
+    "destination_airport_basis": "User's default destination; not visible in screenshots"
+  },
+  "currency": null,
+  "currency_symbol": "$",
+  "airline": null,
+  "fare_basis": null,
+  "departure_time": null,
+  "stops": null,
+  "notes": [
+    "Transcribed from four departure-calendar screenshots supplied by user.",
+    "Currency, airline, airports, one-way versus round-trip, passenger count, taxes and baggage are not visible and are unconfirmed.",
+    "recorded_on is the transcription date, not a confirmed screenshot capture date.",
+    "Null price means no price shown; it does not establish flight unavailability.",
+    "October 1–21 appear shaded before the selected October 22 date.",
+    "Root /data is outside the configured /docs GitHub Pages publishing folder."
+  ],
+  "observations": [
+    {
+      "departure_date": "2026-10-01",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-02",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-03",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-04",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-05",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-06",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-07",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-08",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-09",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-10",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-11",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-12",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-13",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-14",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-15",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-16",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-17",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-18",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-19",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-20",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-21",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-22",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-23",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-24",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-25",
+      "price": 332,
+      "price_display": "$332",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-26",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-27",
+      "price": 350,
+      "price_display": "$350",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-28",
+      "price": 322,
+      "price_display": "$322",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-29",
+      "price": 829,
+      "price_display": "$829",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-30",
+      "price": 342,
+      "price_display": "$342",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-10-31",
+      "price": 542,
+      "price_display": "$542",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-01",
+      "price": 469,
+      "price_display": "$469",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-02",
+      "price": 469,
+      "price_display": "$469",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-03",
+      "price": 469,
+      "price_display": "$469",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-04",
+      "price": 469,
+      "price_display": "$469",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-05",
+      "price": 741,
+      "price_display": "$741",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-06",
+      "price": 660,
+      "price_display": "$660",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-07",
+      "price": 660,
+      "price_display": "$660",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-08",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-09",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-10",
+      "price": 1698,
+      "price_display": "$1698",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-11",
+      "price": 800,
+      "price_display": "$800",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-12",
+      "price": 648,
+      "price_display": "$648",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-13",
+      "price": 648,
+      "price_display": "$648",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-14",
+      "price": 736,
+      "price_display": "$736",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-15",
+      "price": 469,
+      "price_display": "$469",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-16",
+      "price": 596,
+      "price_display": "$596",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-17",
+      "price": 757,
+      "price_display": "$757",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-18",
+      "price": 757,
+      "price_display": "$757",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-19",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-20",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-21",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-22",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-23",
+      "price": 1489,
+      "price_display": "$1489",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-24",
+      "price": 757,
+      "price_display": "$757",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-25",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-26",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-27",
+      "price": 596,
+      "price_display": "$596",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-28",
+      "price": 596,
+      "price_display": "$596",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-29",
+      "price": 596,
+      "price_display": "$596",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-11-30",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image.png"
+    },
+    {
+      "departure_date": "2026-12-01",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-02",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-03",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-04",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-05",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-06",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-07",
+      "price": 521,
+      "price_display": "$521",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-08",
+      "price": 757,
+      "price_display": "$757",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-09",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-10",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-11",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-12",
+      "price": 639,
+      "price_display": "$639",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-13",
+      "price": 639,
+      "price_display": "$639",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-14",
+      "price": 640,
+      "price_display": "$640",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-15",
+      "price": 757,
+      "price_display": "$757",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-16",
+      "price": 1166,
+      "price_display": "$1166",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-17",
+      "price": 1367,
+      "price_display": "$1367",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-18",
+      "price": 1733,
+      "price_display": "$1733",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-19",
+      "price": 1258,
+      "price_display": "$1258",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-20",
+      "price": 1258,
+      "price_display": "$1258",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-21",
+      "price": 944,
+      "price_display": "$944",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-22",
+      "price": 569,
+      "price_display": "$569",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-23",
+      "price": 1036,
+      "price_display": "$1036",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-24",
+      "price": 729,
+      "price_display": "$729",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-25",
+      "price": 1588,
+      "price_display": "$1588",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-26",
+      "price": 1669,
+      "price_display": "$1669",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-27",
+      "price": 1241,
+      "price_display": "$1241",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-28",
+      "price": 729,
+      "price_display": "$729",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-29",
+      "price": 729,
+      "price_display": "$729",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-30",
+      "price": 729,
+      "price_display": "$729",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2026-12-31",
+      "price": 689,
+      "price_display": "$689",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-01",
+      "price": 729,
+      "price_display": "$729",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-02",
+      "price": 857,
+      "price_display": "$857",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-03",
+      "price": 729,
+      "price_display": "$729",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-04",
+      "price": 729,
+      "price_display": "$729",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-05",
+      "price": 584,
+      "price_display": "$584",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-06",
+      "price": 534,
+      "price_display": "$534",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-07",
+      "price": 534,
+      "price_display": "$534",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-08",
+      "price": 694,
+      "price_display": "$694",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-09",
+      "price": 694,
+      "price_display": "$694",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-10",
+      "price": 694,
+      "price_display": "$694",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-11",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-12",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-13",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-14",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-15",
+      "price": 946,
+      "price_display": "$946",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-16",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-17",
+      "price": 658,
+      "price_display": "$658",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-18",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-19",
+      "price": 420,
+      "price_display": "$420",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-20",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-21",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-22",
+      "price": 812,
+      "price_display": "$812",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-23",
+      "price": 808,
+      "price_display": "$808",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-24",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-25",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-26",
+      "price": 420,
+      "price_display": "$420",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-27",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-28",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-29",
+      "price": 767,
+      "price_display": "$767",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-30",
+      "price": 782,
+      "price_display": "$782",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-01-31",
+      "price": 667,
+      "price_display": "$667",
+      "status": "price_shown",
+      "source_image": "image(1).png"
+    },
+    {
+      "departure_date": "2027-02-01",
+      "price": 782,
+      "price_display": "$782",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-02",
+      "price": 399,
+      "price_display": "$399",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-03",
+      "price": 765,
+      "price_display": "$765",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-04",
+      "price": 765,
+      "price_display": "$765",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-05",
+      "price": 767,
+      "price_display": "$767",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-06",
+      "price": 813,
+      "price_display": "$813",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-07",
+      "price": 649,
+      "price_display": "$649",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-08",
+      "price": 767,
+      "price_display": "$767",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-09",
+      "price": 389,
+      "price_display": "$389",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-10",
+      "price": 765,
+      "price_display": "$765",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-11",
+      "price": 795,
+      "price_display": "$795",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-12",
+      "price": 1135,
+      "price_display": "$1135",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-13",
+      "price": 925,
+      "price_display": "$925",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-14",
+      "price": 831,
+      "price_display": "$831",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-15",
+      "price": 782,
+      "price_display": "$782",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-16",
+      "price": 389,
+      "price_display": "$389",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-17",
+      "price": 604,
+      "price_display": "$604",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-18",
+      "price": 464,
+      "price_display": "$464",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-19",
+      "price": 782,
+      "price_display": "$782",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-20",
+      "price": 767,
+      "price_display": "$767",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-21",
+      "price": 767,
+      "price_display": "$767",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-22",
+      "price": 410,
+      "price_display": "$410",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-23",
+      "price": 302,
+      "price_display": "$302",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-24",
+      "price": 474,
+      "price_display": "$474",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-25",
+      "price": 474,
+      "price_display": "$474",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-26",
+      "price": 812,
+      "price_display": "$812",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-27",
+      "price": 775,
+      "price_display": "$775",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-02-28",
+      "price": 643,
+      "price_display": "$643",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-01",
+      "price": 530,
+      "price_display": "$530",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-02",
+      "price": 317,
+      "price_display": "$317",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-03",
+      "price": 391,
+      "price_display": "$391",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-04",
+      "price": 530,
+      "price_display": "$530",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-05",
+      "price": 530,
+      "price_display": "$530",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-06",
+      "price": 530,
+      "price_display": "$530",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-07",
+      "price": 391,
+      "price_display": "$391",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-08",
+      "price": 391,
+      "price_display": "$391",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-09",
+      "price": 307,
+      "price_display": "$307",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-10",
+      "price": 771,
+      "price_display": "$771",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-11",
+      "price": 825,
+      "price_display": "$825",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-12",
+      "price": 842,
+      "price_display": "$842",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-13",
+      "price": 795,
+      "price_display": "$795",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-14",
+      "price": 696,
+      "price_display": "$696",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-15",
+      "price": 492,
+      "price_display": "$492",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-16",
+      "price": 429,
+      "price_display": "$429",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-17",
+      "price": 427,
+      "price_display": "$427",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-18",
+      "price": 432,
+      "price_display": "$432",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-19",
+      "price": 538,
+      "price_display": "$538",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-20",
+      "price": 543,
+      "price_display": "$543",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-21",
+      "price": 432,
+      "price_display": "$432",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-22",
+      "price": 376,
+      "price_display": "$376",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-23",
+      "price": 307,
+      "price_display": "$307",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-24",
+      "price": 386,
+      "price_display": "$386",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-25",
+      "price": 560,
+      "price_display": "$560",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-26",
+      "price": 745,
+      "price_display": "$745",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-27",
+      "price": 637,
+      "price_display": "$637",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-28",
+      "price": 560,
+      "price_display": "$560",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-29",
+      "price": 381,
+      "price_display": "$381",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-30",
+      "price": 307,
+      "price_display": "$307",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-03-31",
+      "price": 371,
+      "price_display": "$371",
+      "status": "price_shown",
+      "source_image": "image(2).png"
+    },
+    {
+      "departure_date": "2027-04-01",
+      "price": 317,
+      "price_display": "$317",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-02",
+      "price": 307,
+      "price_display": "$307",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-03",
+      "price": 307,
+      "price_display": "$307",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-04",
+      "price": 307,
+      "price_display": "$307",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-05",
+      "price": 302,
+      "price_display": "$302",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-06",
+      "price": 283,
+      "price_display": "$283",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-07",
+      "price": 297,
+      "price_display": "$297",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-08",
+      "price": 297,
+      "price_display": "$297",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-09",
+      "price": 297,
+      "price_display": "$297",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-10",
+      "price": 307,
+      "price_display": "$307",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-11",
+      "price": 307,
+      "price_display": "$307",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-12",
+      "price": 297,
+      "price_display": "$297",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-13",
+      "price": 283,
+      "price_display": "$283",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-14",
+      "price": 297,
+      "price_display": "$297",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-15",
+      "price": 297,
+      "price_display": "$297",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-16",
+      "price": 274,
+      "price_display": "$274",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-17",
+      "price": 259,
+      "price_display": "$259",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-18",
+      "price": 254,
+      "price_display": "$254",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-19",
+      "price": 254,
+      "price_display": "$254",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-20",
+      "price": 254,
+      "price_display": "$254",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-21",
+      "price": 254,
+      "price_display": "$254",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-22",
+      "price": 254,
+      "price_display": "$254",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-23",
+      "price": 274,
+      "price_display": "$274",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-24",
+      "price": 264,
+      "price_display": "$264",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-25",
+      "price": 297,
+      "price_display": "$297",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-26",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-27",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-28",
+      "price": 462,
+      "price_display": "$462",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-29",
+      "price": 452,
+      "price_display": "$452",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-04-30",
+      "price": 462,
+      "price_display": "$462",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-01",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-02",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-03",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-04",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-05",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-06",
+      "price": 1185,
+      "price_display": "$1185",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-07",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-08",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-09",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-10",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-11",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-12",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-13",
+      "price": 995,
+      "price_display": "$995",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-14",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-15",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-16",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-17",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-18",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-19",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-20",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-21",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-22",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-23",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-24",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-25",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-26",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-27",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-28",
+      "price": 975,
+      "price_display": "$975",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-29",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-30",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_image": "image(3).png"
+    },
+    {
+      "departure_date": "2027-05-31",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_image": "image(3).png"
+    }
+  ]
+}

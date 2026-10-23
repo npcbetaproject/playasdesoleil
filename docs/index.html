@@ -1,11 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Playas de Soleil</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Costa Rica Trip Finder | Playas de Soleil</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#153d42;background:#f3f7f6}*{box-sizing:border-box}body{margin:0}header{background:#103f46;color:white;padding:42px max(24px,calc((100vw - 1150px)/2)) 48px}header small{color:#a2e2cf;letter-spacing:.14em;text-transform:uppercase}h1{font-size:clamp(30px,5vw,48px);margin:12px 0}header p{color:#c9e1e0;max-width:700px;line-height:1.6}main{max-width:1200px;margin:0 auto;padding:26px 24px}section{background:white;border:1px solid #dce8e5;border-radius:16px;padding:24px;margin-bottom:22px}.filters{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600}input,select,button{font:inherit;padding:11px;border:1px solid #b8cfcb;border-radius:8px;background:white;color:#153d42;min-width:0}button{cursor:pointer}button:hover{background:#e2f5ed}input:focus,select:focus,button:focus{outline:3px solid #7ccfb2;outline-offset:2px}.notice{font-size:14px;line-height:1.65;color:#526b6d}.summary{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.best{background:#e5f5eb;border-color:#b5ddc7}.best strong{font-size:32px;color:#176549}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;white-space:nowrap;font-size:15px}th,td{text-align:left;padding:15px 12px;border-bottom:1px solid #e4eeeb}th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#56706f}tbody tr:first-child{background:#eef8f2}td:last-child{font-weight:700;color:#176549}.pager{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:22px}h2{margin:0 0 10px;font-size:22px}footer{font-size:13px;color:#607775;padding:0 0 30px}#error{color:#9a3030} @media(max-width:800px){.filters{grid-template-columns:1fr 1fr}}@media(max-width:480px){.filters{grid-template-columns:1fr}section{padding:18px}main{padding:18px 12px}}
+</style>
+<script src="app.js" defer></script>
 </head>
 <body>
-  <h1>Hello World</h1>
-</body>
-</html>
+<header><small>Playas de Soleil · Trip planner</small><h1>Find your Costa Rica escape.</h1><p>Compare departure and return calendar prices to find the lowest estimated round-trip combinations from Toronto to Costa Rica.</p></header>
+<main>
+<section aria-label="Trip filters"><div class="filters">
+<label>Trip length<select id="length"><option value="5-7">5–7 nights</option><option value="7-14">7–14 nights</option></select></label>
+<label>Depart on or after<input id="from" type="date"></label>
+<label>Depart on or before<input id="to" type="date"></label>
+<label>Maximum estimated total ($)<input id="budget" type="number" min="0" step="1" placeholder="Any budget"></label>
+<label>Sort results<select id="sort"><option value="price">Lowest total first</option><option value="date">Earliest departure</option><option value="nights">Shortest trip</option></select></label>
+</div><p class="notice">Trip lengths include both endpoints (7 nights appears in both ranges). Only dates with recorded prices are included. <button id="reset" type="button">Reset filters</button></p></section>
+<section class="best" aria-live="polite"><div class="summary"><div><h2>Lowest estimated total</h2><strong id="best">Loading…</strong><p id="bestDates"></p></div><p id="count"></p></div></section>
+<section><h2>Compare trips</h2><p class="notice">Estimated total = displayed departure price + displayed return price. These combinations have not been verified as bookable fares. Currency and fare conditions are unconfirmed; return prices may depend on the original departure selection. Route airports are not shown in the screenshots (Liberia is the intended destination).</p>
+<p id="error" role="alert"></p><div class="scroll"><table><thead><tr><th scope="col">Departure</th><th scope="col">Return</th><th scope="col">Nights</th><th scope="col">Outbound</th><th scope="col">Return</th><th scope="col">Estimated total</th></tr></thead><tbody id="results"></tbody></table></div>
+<div class="pager"><button id="prev" type="button">Previous</button><span id="page" aria-live="polite"></span><button id="next" type="button">Next</button></div></section>
+<footer>Source: calendar screenshots recorded October 22, 2026. Screenshot capture date unconfirmed. These are saved observations, not live prices.</footer>
+</main></body></html>
