@@ -62,6 +62,11 @@ if (typeof document !== 'undefined') {
   Promise.all(['flight-prices-2026-10-22.json','return-flight-prices-2026-10-22.json'].map(async file=>{
     const response=await fetch('data/'+file, {cache: 'no-store'});if(!response.ok)throw new Error('Price data could not be loaded.');return response.json();
   })).then(([out,back])=>{
+    const timestamps = [out.refreshed_at, back.refreshed_at].map(value => value ? Date.parse(value) : NaN);
+    const stamp = document.getElementById('lastUpdated');
+    if (stamp) stamp.textContent = timestamps.every(Number.isFinite)
+      ? 'Last updated: ' + new Intl.DateTimeFormat('en-CA', {dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/Toronto'}).format(new Date(Math.min(...timestamps))) + ' (Toronto time)'
+      : 'Last updated: unavailable';
     outbound=out.observations.filter(r=>Number.isFinite(r.price)).sort((a,b)=>a.departure_date.localeCompare(b.departure_date));
     inbound=back.observations; if(!outbound.length)throw new Error('No departure prices available.');
     for(const id of ['from','to']) {$(id).min=outbound[0].departure_date;$(id).max=outbound[outbound.length-1].departure_date;}
