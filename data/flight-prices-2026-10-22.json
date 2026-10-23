@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "recorded_on": "2026-10-22",
-  "refreshed_at": "2026-10-23T00:47:52.219Z",
+  "refreshed_at": "2026-10-23T00:52:44.281Z",
   "source_url": "https://www.westjet.com/en-ca",
   "source_method": "WestJet rendered departure and return calendar text collected with browser",
   "direction": "outbound",
@@ -21,11 +21,11 @@
   "departure_time": null,
   "stops": null,
   "notes": [
-    "Replaces screenshot observations with freshly read WestJet calendar prices.",
     "WestJet calendar states: All prices in CAD, one-way, per guest.",
     "Round-trip comparison sums outbound and return calendar prices.",
     "Null means no price displayed; it does not establish flight unavailability.",
-    "Fares are a saved snapshot, subject to change; baggage and fare class not captured."
+    "Fares are a saved snapshot, subject to change; baggage and fare class not captured.",
+    "Scanned every available calendar month from October 2026 through September 2027. October–May prices were unchanged from the preceding refresh. Dates beyond September 18 are outside the available booking horizon."
   ],
   "observations": [
     {
@@ -1728,6 +1728,783 @@
       "price_display": null,
       "status": "no_price_shown",
       "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-01",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-02",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-03",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-04",
+      "price": 827,
+      "price_display": "$827",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-05",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-06",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-07",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-08",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-09",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-10",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-11",
+      "price": 1185,
+      "price_display": "$1185",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-12",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-13",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-14",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-15",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-16",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-17",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-18",
+      "price": 1185,
+      "price_display": "$1185",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-19",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-20",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-21",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-22",
+      "price": 472,
+      "price_display": "$472",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-23",
+      "price": 422,
+      "price_display": "$422",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-24",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-25",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-26",
+      "price": 507,
+      "price_display": "$507",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-27",
+      "price": 422,
+      "price_display": "$422",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-28",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-29",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-06-30",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-01",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-02",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-03",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-04",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-05",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-06",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-07",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-08",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-09",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-10",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-11",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-12",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-13",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-14",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-15",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-16",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-17",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-18",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-19",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-20",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-21",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-22",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-23",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-24",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-25",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-26",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-27",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-28",
+      "price": 619,
+      "price_display": "$619",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-29",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-30",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-07-31",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-01",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-02",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-03",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-04",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-05",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-06",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-07",
+      "price": 594,
+      "price_display": "$594",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-08",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-09",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-10",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-11",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-12",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-13",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-14",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-15",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-16",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-17",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-18",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-19",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-20",
+      "price": 1048,
+      "price_display": "$1048",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-21",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-22",
+      "price": 488,
+      "price_display": "$488",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-23",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-24",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-25",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-26",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-27",
+      "price": 1185,
+      "price_display": "$1185",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-28",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-29",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-30",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-08-31",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-01",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-02",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-03",
+      "price": 1185,
+      "price_display": "$1185",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-04",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-05",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-06",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-07",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-08",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-09",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-10",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-11",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-12",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-13",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-14",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-15",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-16",
+      "price": null,
+      "price_display": null,
+      "status": "no_price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-17",
+      "price": 1185,
+      "price_display": "$1185",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
+    },
+    {
+      "departure_date": "2027-09-18",
+      "price": 547,
+      "price_display": "$547",
+      "status": "price_shown",
+      "source_url": "https://www.westjet.com/en-ca"
     }
-  ]
+  ],
+  "date_range": {
+    "from": "2026-10-22",
+    "through": "2027-09-18"
+  },
+  "booking_horizon_end": "2027-09-18",
+  "calendar_scan_complete": true,
+  "calendar_end_evidence": "Next Month disabled with August and September 2027 displayed; September 19 onward disabled."
 }
