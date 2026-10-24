@@ -23,10 +23,39 @@ if (typeof document !== 'undefined') {
   const date = value => new Date(value + 'T00:00:00Z').toLocaleDateString('en-CA',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
   let outbound = [], inbound = [], trips = [], page = 0;
   const size = 30;
+  const fullDate = value => new Date(value + 'T00:00:00Z').toLocaleDateString('en-CA', {
+    weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'
+  });
+  const dialog = $('tripDialog');
+  function showTrip(trip) {
+    $('tripDuration').textContent = trip.nights + ' nights in Costa Rica · round trip';
+    $('tripDeparture').textContent = fullDate(trip.departure);
+    $('tripReturn').textContent = fullDate(trip.returnDate);
+    $('tripOutboundPrice').textContent = money(trip.outbound);
+    $('tripInboundPrice').textContent = money(trip.inbound);
+    $('tripTotal').textContent = money(trip.total);
+    $('tripDiscountNote').hidden = $('discountNote').hidden;
+    $('tripDiscountNote').textContent = $('discountNote').textContent;
+    dialog.showModal();
+  }
+  $('closeTripDialog').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    const bounds = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+  });
   function render() {
     const body = $('results'); body.replaceChildren();
     for (const trip of trips.slice(page * size, (page + 1) * size)) {
       const row = document.createElement('tr');
+      row.className = 'trip-row';
+      row.tabIndex = 0;
+      row.setAttribute('aria-label', 'View trip details: ' + fullDate(trip.departure) + ' to ' + fullDate(trip.returnDate) + ', ' + trip.nights + ' nights, ' + money(trip.total));
+      row.setAttribute('aria-haspopup', 'dialog');
+      row.addEventListener('click', () => showTrip(trip));
+      row.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showTrip(trip); }
+      });
       for (const value of [trip.nights,date(trip.departure),date(trip.returnDate)]) {
         const cell = document.createElement('td'); cell.textContent = value; row.append(cell);
       }
