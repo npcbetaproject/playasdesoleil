@@ -28,7 +28,13 @@ if (typeof document !== 'undefined') {
   });
   const dialog = $('tripDialog');
   function showTrip(trip) {
-    $('tripDuration').textContent = trip.nights + ' nights in Costa Rica · round trip';
+    const nightsBadge = document.createElement('strong');
+    nightsBadge.className = 'trip-nights-badge';
+    nightsBadge.textContent = trip.nights + ' nights';
+    const destination = document.createElement('span');
+    destination.className = 'trip-duration-caption';
+    destination.textContent = 'in Costa Rica · round trip';
+    $('tripDuration').replaceChildren(nightsBadge, destination);
     $('tripDeparture').textContent = fullDate(trip.departure);
     $('tripReturn').textContent = fullDate(trip.returnDate);
     $('tripOutboundPrice').textContent = money(trip.outbound);
