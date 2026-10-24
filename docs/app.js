@@ -50,14 +50,17 @@ if (typeof document !== 'undefined') {
     if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right ||
         event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
   });
-  function selectCard(nights) {
+  function selectCard(nights, price) {
     selectedNights = nights;
+    if (Number.isFinite(price)) $('budget').value = String(price);
     $('sort').value = 'newest';
     filter();
     $('tripResults').focus({preventScroll: true});
     $('tripResults').scrollIntoView({behavior: 'smooth', block: 'start'});
   }
-  $('allTripsCard').addEventListener('click', () => selectCard(null));
+  $('allTripsCard').addEventListener('click', () => {
+    if (allTrips.length) selectCard(null, Math.min(...allTrips.map(trip => trip.total)));
+  });
   $('clearCardSelection').addEventListener('click', () => selectCard(null));
   function render() {
     $('cardSelection').hidden = selectedNights === null;
@@ -100,8 +103,8 @@ if (typeof document !== 'undefined') {
         const card = document.createElement('button'); card.type = 'button'; card.className = 'price-card';
         card.disabled = !winner;
         card.setAttribute('aria-pressed', String(selectedNights === nights));
-        card.setAttribute('aria-label', 'Show ' + nights + '-night trips, latest departure first');
-        card.addEventListener('click', () => selectCard(nights));
+        card.setAttribute('aria-label', 'Show ' + nights + '-night trips at ' + (winner ? money(winner.total) : 'the lowest price') + ', latest departure first');
+        card.addEventListener('click', () => { if (winner) selectCard(nights, winner.total); });
         const title = document.createElement('h3'); title.textContent = 'Best ' + nights + '-night trip';
         const price = document.createElement('strong'); price.textContent = winner ? money(winner.total) : 'No matching trip';
         if (!winner) price.className = 'no-trip';
