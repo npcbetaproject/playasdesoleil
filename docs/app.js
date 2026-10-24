@@ -14,14 +14,14 @@ function findTrips(outbound, inbound, options) {
       trips.push({departure: departure.departure_date, returnDate, nights, outbound: departure.price, inbound: returnPrice, total});
     }
   }
-  return trips.sort((a,b) => options.sort === 'date' ? a.departure.localeCompare(b.departure) || a.total-b.total : options.sort === 'nights' ? a.nights-b.nights || a.total-b.total : a.total-b.total || a.departure.localeCompare(b.departure) || a.nights-b.nights);
+  return trips.sort((a,b) => options.sort === 'newest' ? b.departure.localeCompare(a.departure) || a.total-b.total || a.nights-b.nights : options.sort === 'date' ? a.departure.localeCompare(b.departure) || a.total-b.total : options.sort === 'nights' ? a.nights-b.nights || a.total-b.total : a.total-b.total || a.departure.localeCompare(b.departure) || a.nights-b.nights);
 }
 if (typeof module !== 'undefined') module.exports = {findTrips};
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
   const money = amount => 'CAD ' + amount.toLocaleString('en-CA');
   const date = value => new Date(value + 'T00:00:00Z').toLocaleDateString('en-CA',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
-  let outbound = [], inbound = [], trips = [], page = 0;
+  let outbound = [], inbound = [], trips = [], allTrips = [], page = 0, selectedNights = null;
   const size = 30;
   const fullDate = value => new Date(value + 'T00:00:00Z').toLocaleDateString('en-CA', {
     weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'
@@ -50,7 +50,20 @@ if (typeof document !== 'undefined') {
     if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right ||
         event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
   });
+  function selectCard(nights) {
+    selectedNights = nights;
+    $('sort').value = 'newest';
+    filter();
+    $('tripResults').focus({preventScroll: true});
+    $('tripResults').scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+  $('allTripsCard').addEventListener('click', () => selectCard(null));
+  $('clearCardSelection').addEventListener('click', () => selectCard(null));
   function render() {
+    $('cardSelection').hidden = selectedNights === null;
+    $('cardSelectionText').textContent = selectedNights === null ? '' : 'Showing ' + selectedNights + '-night trips.';
+    $('allTripsCard').disabled = !allTrips.length;
+    $('allTripsCard').setAttribute('aria-pressed', String(selectedNights === null));
     const body = $('results'); body.replaceChildren();
     for (const trip of trips.slice(page * size, (page + 1) * size)) {
       const row = document.createElement('tr');
@@ -73,7 +86,7 @@ if (typeof document !== 'undefined') {
       body.append(row);
     }
     if (!trips.length) {const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=4;cell.textContent='No trips match. Try a wider departure range or higher budget.';row.append(cell);body.append(row);}
-    const best = trips.reduce((a,b) => !a || b.total < a.total ? b : a, null);
+    const best = allTrips.reduce((a,b) => !a || b.total < a.total ? b : a, null);
     $('best').textContent = best ? money(best.total) : 'No matching trips';
     $('bestDates').textContent = best ? date(best.departure)+' → '+date(best.returnDate)+' · '+best.nights+' nights' : '';
     $('count').textContent = trips.length.toLocaleString()+' matching combinations';
@@ -82,9 +95,13 @@ if (typeof document !== 'undefined') {
       cards.replaceChildren();
       const [minNights, maxNights] = $('length').value.split('-').map(Number);
       for (let nights = minNights; nights <= maxNights; nights++) {
-        const winner = trips.filter(trip => trip.nights === nights).reduce((best, trip) =>
+        const winner = allTrips.filter(trip => trip.nights === nights).reduce((best, trip) =>
           !best || trip.total < best.total || (trip.total === best.total && trip.departure < best.departure) ? trip : best, null);
-        const card = document.createElement('article'); card.className = 'price-card';
+        const card = document.createElement('button'); card.type = 'button'; card.className = 'price-card';
+        card.disabled = !winner;
+        card.setAttribute('aria-pressed', String(selectedNights === nights));
+        card.setAttribute('aria-label', 'Show ' + nights + '-night trips, latest departure first');
+        card.addEventListener('click', () => selectCard(nights));
         const title = document.createElement('h3'); title.textContent = 'Best ' + nights + '-night trip';
         const price = document.createElement('strong'); price.textContent = winner ? money(winner.total) : 'No matching trip';
         if (!winner) price.className = 'no-trip';
@@ -99,14 +116,16 @@ if (typeof document !== 'undefined') {
   function filter() {
     $('error').textContent = '';
     if ($('from').value > $('to').value) $('error').textContent='Choose an end date on or after the start date.';
-    trips=findTrips(outbound,inbound,{length:$('length').value,from:$('from').value,to:$('to').value,budget:$('budget').value,sort:$('sort').value});
+    allTrips=findTrips(outbound,inbound,{length:$('length').value,from:$('from').value,to:$('to').value,budget:$('budget').value,sort:$('sort').value});
+    trips = selectedNights === null ? allTrips : allTrips.filter(trip => trip.nights === selectedNights);
     page=0;render();
   }
   function reset() {
+    selectedNights = null;
     $('length').value='4-7';$('from').value=outbound[0].departure_date;$('to').value=outbound[outbound.length-1].departure_date;
     $('budget').value='';$('sort').value='price';filter();
   }
-  for (const id of ['length','from','to','budget','sort']) $(id).addEventListener('input',filter);
+  for (const id of ['length','from','to','budget','sort']) $(id).addEventListener('input', () => { if (id === 'length') selectedNights = null; filter(); });
   $('reset').addEventListener('click',()=>{if(outbound.length)reset();});
   $('prev').addEventListener('click',()=>{if(page>0){page--;render();}});
   $('next').addEventListener('click',()=>{if((page+1)*size<trips.length){page++;render();}});
