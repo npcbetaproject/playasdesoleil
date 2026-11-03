@@ -18,16 +18,17 @@ main{padding:14px 20px}section{padding:14px 16px;margin-bottom:12px;border-radiu
 @media(max-width:480px){.trip-dialog-head,.trip-dialog-body{padding:18px}.trip-leg{grid-template-columns:36px 1fr;padding:12px;gap:10px}.leg-icon{width:34px;height:34px}.leg-price{grid-column:2}.leg-date{font-size:16px}.trip-total strong{font-size:25px}}
 .trip-dialog-head #tripDuration{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:14px}.trip-nights-badge{display:inline-block;padding:8px 16px;border-radius:12px;background:#a2e2cf;color:#103f46;font-size:clamp(30px,7vw,38px);font-weight:800;line-height:1.15;letter-spacing:-.03em}.trip-duration-caption{font-size:14px;color:#c9e1e0}
 button.price-card{text-align:left;font:inherit;color:inherit;cursor:pointer}button.price-card:hover{background:#eef8f2;border-color:#73b99e}button.price-card:disabled{cursor:default;opacity:.65}button.price-card[aria-pressed="true"]{border-color:#176549;box-shadow:inset 0 0 0 2px #176549}#tripResults:focus{outline:none}
+.price-card.preferred-trip{border-color:#9bbcb9;box-shadow:inset 0 0 0 1px #9bbcb9}.price-card.preferred-trip h3::after{content:" ★";color:#668d87}.price-card.preferred-trip[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #176549}
 </style>
-<script src="app.js?v=20261024-card-matches" defer></script>
+<script src="app.js?v=20261103-month-filters" defer></script>
 </head>
 <body>
 <header><small>Playas de Soleil</small><h1>Costa Rica Trip Finder <span class="refresh-reminder">“Refresh the flight data and push live.”</span></h1><span>Toronto (YYZ) ↔ Liberia (LIR) · CAD per guest</span><span id="lastUpdated" aria-live="polite">Last updated: loading…</span></header>
 <main>
 <section aria-label="Trip filters"><div class="filters">
 
-<label>Departure from<input id="from" type="date"></label>
-<label>Departure to<input id="to" type="date"></label><label>Trip length<select id="length"><option value="4-7">4–7 nights</option><option value="7-14">7–14 nights</option></select></label>
+<label>Departure from<select id="from" aria-label="Departure from month"></select></label>
+<label>Departure to<select id="to" aria-label="Departure to month"></select></label><label>Trip length<select id="length"><option value="4-7">4–7 nights</option><option value="7-14">7–14 nights</option></select></label>
 <label>Max total (CAD)<input id="budget" type="number" min="0" step="1" placeholder="Any budget"></label>
 <label>Sort results<select id="sort"><option value="price">Lowest total first</option><option value="date">Earliest departure</option><option value="newest">Latest departure first</option><option value="nights">Shortest trip</option></select></label>
 </div><p class="notice"><span id="dataRange">Loading available dates…</span> · Length = nights away. 7 is included in both ranges. <button id="reset" type="button">Reset filters</button></p></section>
@@ -46,3 +47,4 @@ button.price-card{text-align:left;font:inherit;color:inherit;cursor:pointer}butt
 <p id="tripDialogNote" class="notice">Saved WestJet calendar prices, subject to change. Flight times and availability must be confirmed with the airline.</p>
 <p id="tripDiscountNote" class="notice" hidden></p>
 </div></dialog></body></html>
+

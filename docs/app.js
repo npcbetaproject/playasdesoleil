@@ -1,5 +1,20 @@
 'use strict';
 const DAY = 86400000;
+// Calendar limits use Toronto's date, independent of the viewer's timezone.
+function departureMonths(now = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-CA', {timeZone: 'America/Toronto', year: 'numeric', month: '2-digit', day: '2-digit'}).formatToParts(now);
+  const value = type => parts.find(part => part.type === type).value;
+  const today = value('year') + '-' + value('month') + '-' + value('day');
+  const months = Array.from({length: 12}, (_, offset) => {
+    const date = new Date(Date.UTC(Number(value('year')), Number(value('month')) - 1 + offset, 1));
+    return {value: date.toISOString().slice(0, 7), label: date.toLocaleDateString('en-CA', {month: 'long', year: 'numeric', timeZone: 'UTC'})};
+  });
+  return {today, months};
+}
+function departureBounds(fromMonth, toMonth, today) {
+  const [year, month] = toMonth.split('-').map(Number);
+  return {from: [fromMonth + '-01', today].sort().pop(), to: new Date(Date.UTC(year, month, 0)).toISOString().slice(0, 10)};
+}
 function findTrips(outbound, inbound, options) {
   const [min, max] = options.length.split('-').map(Number);
   const returns = new Map(inbound.filter(r => Number.isFinite(r.price)).map(r => [r.return_date, r.price]));
@@ -16,7 +31,7 @@ function findTrips(outbound, inbound, options) {
   }
   return trips.sort((a,b) => options.sort === 'newest' ? b.departure.localeCompare(a.departure) || a.total-b.total || a.nights-b.nights : options.sort === 'date' ? a.departure.localeCompare(b.departure) || a.total-b.total : options.sort === 'nights' ? a.nights-b.nights || a.total-b.total : a.total-b.total || a.departure.localeCompare(b.departure) || a.nights-b.nights);
 }
-if (typeof module !== 'undefined') module.exports = {findTrips};
+if (typeof module !== 'undefined') module.exports = {findTrips, departureMonths, departureBounds};
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
   const money = amount => 'CAD ' + amount.toLocaleString('en-CA');
@@ -102,6 +117,7 @@ if (typeof document !== 'undefined') {
           !best || trip.total < best.total || (trip.total === best.total && trip.departure < best.departure) ? trip : best, null);
         const card = document.createElement('button'); card.type = 'button'; card.className = 'price-card';
         card.disabled = !winner;
+        if (nights === 5) card.classList.add('preferred-trip');
         card.setAttribute('aria-pressed', String(selectedNights === nights));
         card.setAttribute('aria-label', 'Show ' + nights + '-night trips at ' + (winner ? money(winner.total) : 'the lowest price') + ', latest departure first');
         card.addEventListener('click', () => { if (winner) selectCard(nights, winner.total); });
@@ -118,14 +134,23 @@ if (typeof document !== 'undefined') {
   }
   function filter() {
     $('error').textContent = '';
-    if ($('from').value > $('to').value) $('error').textContent='Choose an end date on or after the start date.';
-    allTrips=findTrips(outbound,inbound,{length:$('length').value,from:$('from').value,to:$('to').value,budget:$('budget').value,sort:$('sort').value});
+    const {today} = departureMonths();
+    const bounds = departureBounds($('from').value, $('to').value, today);
+    if ($('from').value > $('to').value) $('error').textContent='Choose an end month on or after the start month.';
+    allTrips=findTrips(outbound,inbound,{length:$('length').value,from:bounds.from,to:bounds.to,budget:$('budget').value,sort:$('sort').value});
     trips = selectedNights === null ? allTrips : allTrips.filter(trip => trip.nights === selectedNights);
     page=0;render();
   }
   function reset() {
     selectedNights = null;
-    $('length').value='4-7';$('from').value=outbound[0].departure_date;$('to').value=outbound[outbound.length-1].departure_date;
+    $('length').value='4-7';
+    const {months} = departureMonths();
+    for (const id of ['from', 'to']) {
+      $(id).replaceChildren(...months.map(month => {
+        const option = document.createElement('option'); option.value = month.value; option.textContent = month.label; return option;
+      }));
+    }
+    $('from').value=months[0].value;$('to').value=months[months.length-1].value;
     $('budget').value='';$('sort').value='price';filter();
   }
   for (const id of ['length','from','to','budget','sort']) $(id).addEventListener('input', () => { if (id === 'length') selectedNights = null; filter(); });
@@ -148,15 +173,15 @@ if (typeof document !== 'undefined') {
       : 'Last updated: unavailable';
     outbound=out.observations.filter(r=>Number.isFinite(r.price)).sort((a,b)=>a.departure_date.localeCompare(b.departure_date));
     inbound=back.observations; if(!outbound.length)throw new Error('No departure prices available.');
-    for(const id of ['from','to']) {$(id).min=outbound[0].departure_date;$(id).max=outbound[outbound.length-1].departure_date;}
     const range = document.getElementById('dataRange');
     if (range) {
       const returnDates = inbound.filter(r => Number.isFinite(r.price)).map(r => r.return_date).sort();
       range.textContent = 'Available departures: ' + date(outbound[0].departure_date) + '–' + date(outbound[outbound.length-1].departure_date)
         + (returnDates.length ? ' · Returns through ' + date(returnDates[returnDates.length-1]) : '')
-        + '. Date filters apply to departure dates';
+        + '. Month filters apply to departures: today onwards, through the last day of the selected end month. Months without saved fares show no trips.';
     }
     reset();
   }).catch(error=>{$('error').textContent=error.message+' Please reload the page.';$('best').textContent='Prices unavailable';});
 }
+
 
