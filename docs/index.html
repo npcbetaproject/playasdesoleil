@@ -20,7 +20,7 @@ main{padding:14px 20px}section{padding:14px 16px;margin-bottom:12px;border-radiu
 button.price-card{text-align:left;font:inherit;color:inherit;cursor:pointer}button.price-card:hover{background:#eef8f2;border-color:#73b99e}button.price-card:disabled{cursor:default;opacity:.65}button.price-card[aria-pressed="true"]{border-color:#176549;box-shadow:inset 0 0 0 2px #176549}#tripResults:focus{outline:none}
 .price-card.preferred-trip{border-color:#9bbcb9;box-shadow:inset 0 0 0 1px #9bbcb9}.price-card.preferred-trip h3::after{content:" ★";color:#668d87}.price-card.preferred-trip[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #176549}
 </style>
-<script src="app.js?v=20261103-default-filters" defer></script>
+<script src="app.js?v=20261103-trip-toggles" defer></script>
 </head>
 <body>
 <header><small>Playas de Soleil</small><h1>Costa Rica Trip Finder <span class="refresh-reminder">“Refresh the flight data and push live.”</span></h1><span>Toronto (YYZ) ↔ Liberia (LIR) · CAD per guest</span><span id="lastUpdated" aria-live="polite">Last updated: loading…</span></header>
@@ -28,7 +28,7 @@ button.price-card{text-align:left;font:inherit;color:inherit;cursor:pointer}butt
 <section aria-label="Trip filters"><div class="filters">
 
 <label>Departure from<select id="from" aria-label="Departure from month"></select></label>
-<label>Departure to<select id="to" aria-label="Departure to month"></select></label><label>Trip length<select id="length"><option value="4-7">4–7 nights</option><option value="7-14">7–14 nights</option></select></label>
+<label>Departure to<select id="to" aria-label="Departure to month"></select></label><label>Trip length<select id="length"><option value="4-4">4 nights</option><option value="5-5">5 nights</option><option value="6-6">6 nights</option><option value="7-7">7 nights</option><option value="4-7" selected>4–7 nights</option><option value="7-14">7–14 nights</option></select></label>
 <label>Max total (CAD)<select id="budget"><option value="400">Under 400</option><option value="550" selected>Under 550</option><option value="850">Under 850</option><option value="1000">Under 1,000</option></select></label>
 <label>Sort results<select id="sort"><option value="price">Lowest total first</option><option value="date" selected>Earliest departure</option><option value="newest">Latest departure first</option><option value="nights">Shortest trip</option></select></label>
 </div><p class="notice"><span id="dataRange">Loading available dates…</span> · Length = nights away. 7 is included in both ranges. <button id="reset" type="button">Reset filters</button></p></section>

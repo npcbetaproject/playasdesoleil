@@ -66,6 +66,10 @@ if (typeof document !== 'undefined') {
         event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
   });
   function selectCard(nights, price) {
+    if (selectedPrice !== null && selectedNights === nights) {
+      reset();
+      return;
+    }
     selectedNights = nights;
     selectedPrice = Number.isFinite(price) ? price : null;
     $('sort').value = 'newest';
@@ -76,12 +80,12 @@ if (typeof document !== 'undefined') {
   $('allTripsCard').addEventListener('click', () => {
     if (allTrips.length) selectCard(null, Math.min(...allTrips.map(trip => trip.total)));
   });
-  $('clearCardSelection').addEventListener('click', () => selectCard(null));
+  $('clearCardSelection').addEventListener('click', reset);
   function render() {
     $('cardSelection').hidden = selectedNights === null && selectedPrice === null;
     $('cardSelectionText').textContent = selectedPrice === null ? '' : 'Showing ' + (selectedNights === null ? 'all lengths' : selectedNights + '-night trips') + ' at ' + money(selectedPrice) + '.';
     $('allTripsCard').disabled = !allTrips.length;
-    $('allTripsCard').setAttribute('aria-pressed', String(selectedNights === null));
+    $('allTripsCard').setAttribute('aria-pressed', String(selectedPrice !== null && selectedNights === null));
     const body = $('results'); body.replaceChildren();
     for (const trip of trips.slice(page * size, (page + 1) * size)) {
       const row = document.createElement('tr');
@@ -118,7 +122,7 @@ if (typeof document !== 'undefined') {
         const card = document.createElement('button'); card.type = 'button'; card.className = 'price-card';
         card.disabled = !winner;
         if (nights === 5) card.classList.add('preferred-trip');
-        card.setAttribute('aria-pressed', String(selectedNights === nights));
+        card.setAttribute('aria-pressed', String(selectedPrice !== null && selectedNights === nights));
         card.setAttribute('aria-label', 'Show ' + nights + '-night trips at ' + (winner ? money(winner.total) : 'the lowest price') + ', latest departure first');
         card.addEventListener('click', () => { if (winner) selectCard(nights, winner.total); });
         const title = document.createElement('h3'); title.textContent = 'Best ' + nights + '-night trip';
