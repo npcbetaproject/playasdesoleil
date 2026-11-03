@@ -5,11 +5,11 @@ function departureMonths(now = new Date()) {
   const parts = new Intl.DateTimeFormat('en-CA', {timeZone: 'America/Toronto', year: 'numeric', month: '2-digit', day: '2-digit'}).formatToParts(now);
   const value = type => parts.find(part => part.type === type).value;
   const today = value('year') + '-' + value('month') + '-' + value('day');
-  const months = Array.from({length: 12}, (_, offset) => {
+  const months = Array.from({length: Math.max(12, 17 - Number(value('month')))}, (_, offset) => {
     const date = new Date(Date.UTC(Number(value('year')), Number(value('month')) - 1 + offset, 1));
     return {value: date.toISOString().slice(0, 7), label: date.toLocaleDateString('en-CA', {month: 'long', year: 'numeric', timeZone: 'UTC'})};
   });
-  return {today, months};
+  return {today, months, defaultTo: String(Number(value('year')) + 1) + '-04'};
 }
 function departureBounds(fromMonth, toMonth, today) {
   const [year, month] = toMonth.split('-').map(Number);
@@ -25,7 +25,7 @@ function findTrips(outbound, inbound, options) {
       const returnDate = new Date(Date.parse(departure.departure_date + 'T00:00:00Z') + nights * DAY).toISOString().slice(0, 10);
       if (!returns.has(returnDate)) continue;
       const returnPrice = returns.get(returnDate), total = departure.price + returnPrice;
-      if (options.budget !== '' && total > Number(options.budget)) continue;
+      if (options.budget !== '' && total >= Number(options.budget)) continue;
       trips.push({departure: departure.departure_date, returnDate, nights, outbound: departure.price, inbound: returnPrice, total});
     }
   }
@@ -36,7 +36,7 @@ if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
   const money = amount => 'CAD ' + amount.toLocaleString('en-CA');
   const date = value => new Date(value + 'T00:00:00Z').toLocaleDateString('en-CA',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
-  let outbound = [], inbound = [], trips = [], allTrips = [], page = 0, selectedNights = null;
+  let outbound = [], inbound = [], trips = [], allTrips = [], page = 0, selectedNights = null, selectedPrice = null;
   const size = 30;
   const fullDate = value => new Date(value + 'T00:00:00Z').toLocaleDateString('en-CA', {
     weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'
@@ -67,7 +67,7 @@ if (typeof document !== 'undefined') {
   });
   function selectCard(nights, price) {
     selectedNights = nights;
-    if (Number.isFinite(price)) $('budget').value = String(price);
+    selectedPrice = Number.isFinite(price) ? price : null;
     $('sort').value = 'newest';
     filter();
     $('tripResults').focus({preventScroll: true});
@@ -78,8 +78,8 @@ if (typeof document !== 'undefined') {
   });
   $('clearCardSelection').addEventListener('click', () => selectCard(null));
   function render() {
-    $('cardSelection').hidden = selectedNights === null;
-    $('cardSelectionText').textContent = selectedNights === null ? '' : 'Showing ' + selectedNights + '-night trips.';
+    $('cardSelection').hidden = selectedNights === null && selectedPrice === null;
+    $('cardSelectionText').textContent = selectedPrice === null ? '' : 'Showing ' + (selectedNights === null ? 'all lengths' : selectedNights + '-night trips') + ' at ' + money(selectedPrice) + '.';
     $('allTripsCard').disabled = !allTrips.length;
     $('allTripsCard').setAttribute('aria-pressed', String(selectedNights === null));
     const body = $('results'); body.replaceChildren();
@@ -138,22 +138,22 @@ if (typeof document !== 'undefined') {
     const bounds = departureBounds($('from').value, $('to').value, today);
     if ($('from').value > $('to').value) $('error').textContent='Choose an end month on or after the start month.';
     allTrips=findTrips(outbound,inbound,{length:$('length').value,from:bounds.from,to:bounds.to,budget:$('budget').value,sort:$('sort').value});
-    trips = selectedNights === null ? allTrips : allTrips.filter(trip => trip.nights === selectedNights);
+    trips = allTrips.filter(trip => (selectedNights === null || trip.nights === selectedNights) && (selectedPrice === null || trip.total === selectedPrice));
     page=0;render();
   }
   function reset() {
-    selectedNights = null;
+    selectedNights = null; selectedPrice = null;
     $('length').value='4-7';
-    const {months} = departureMonths();
+    const {months, defaultTo} = departureMonths();
     for (const id of ['from', 'to']) {
       $(id).replaceChildren(...months.map(month => {
         const option = document.createElement('option'); option.value = month.value; option.textContent = month.label; return option;
       }));
     }
-    $('from').value=months[0].value;$('to').value=months[months.length-1].value;
-    $('budget').value='';$('sort').value='price';filter();
+    $('from').value=months[0].value;$('to').value=defaultTo;
+    $('budget').value='550';$('sort').value='date';filter();
   }
-  for (const id of ['length','from','to','budget','sort']) $(id).addEventListener('input', () => { if (id === 'length') selectedNights = null; filter(); });
+  for (const id of ['length','from','to','budget','sort']) $(id).addEventListener('input', () => { if (id !== 'sort') { selectedNights = null; selectedPrice = null; } filter(); });
   $('reset').addEventListener('click',()=>{if(outbound.length)reset();});
   $('prev').addEventListener('click',()=>{if(page>0){page--;render();}});
   $('next').addEventListener('click',()=>{if((page+1)*size<trips.length){page++;render();}});

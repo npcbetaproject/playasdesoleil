@@ -20,7 +20,7 @@ main{padding:14px 20px}section{padding:14px 16px;margin-bottom:12px;border-radiu
 button.price-card{text-align:left;font:inherit;color:inherit;cursor:pointer}button.price-card:hover{background:#eef8f2;border-color:#73b99e}button.price-card:disabled{cursor:default;opacity:.65}button.price-card[aria-pressed="true"]{border-color:#176549;box-shadow:inset 0 0 0 2px #176549}#tripResults:focus{outline:none}
 .price-card.preferred-trip{border-color:#9bbcb9;box-shadow:inset 0 0 0 1px #9bbcb9}.price-card.preferred-trip h3::after{content:" ★";color:#668d87}.price-card.preferred-trip[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #176549}
 </style>
-<script src="app.js?v=20261103-month-filters" defer></script>
+<script src="app.js?v=20261103-default-filters" defer></script>
 </head>
 <body>
 <header><small>Playas de Soleil</small><h1>Costa Rica Trip Finder <span class="refresh-reminder">“Refresh the flight data and push live.”</span></h1><span>Toronto (YYZ) ↔ Liberia (LIR) · CAD per guest</span><span id="lastUpdated" aria-live="polite">Last updated: loading…</span></header>
@@ -29,11 +29,11 @@ button.price-card{text-align:left;font:inherit;color:inherit;cursor:pointer}butt
 
 <label>Departure from<select id="from" aria-label="Departure from month"></select></label>
 <label>Departure to<select id="to" aria-label="Departure to month"></select></label><label>Trip length<select id="length"><option value="4-7">4–7 nights</option><option value="7-14">7–14 nights</option></select></label>
-<label>Max total (CAD)<input id="budget" type="number" min="0" step="1" placeholder="Any budget"></label>
-<label>Sort results<select id="sort"><option value="price">Lowest total first</option><option value="date">Earliest departure</option><option value="newest">Latest departure first</option><option value="nights">Shortest trip</option></select></label>
+<label>Max total (CAD)<select id="budget"><option value="400">Under 400</option><option value="550" selected>Under 550</option><option value="850">Under 850</option><option value="1000">Under 1,000</option></select></label>
+<label>Sort results<select id="sort"><option value="price">Lowest total first</option><option value="date" selected>Earliest departure</option><option value="newest">Latest departure first</option><option value="nights">Shortest trip</option></select></label>
 </div><p class="notice"><span id="dataRange">Loading available dates…</span> · Length = nights away. 7 is included in both ranges. <button id="reset" type="button">Reset filters</button></p></section>
 <section class="trip-highlights" aria-label="Best trip prices" aria-live="polite"><div class="highlight-heading"><h2>Best trips for your filters</h2><p id="count"></p></div><div class="price-cards"><button type="button" id="allTripsCard" class="price-card best"><h3>Lowest round-trip total</h3><strong id="best">Loading…</strong><p id="bestDates"></p></button><div id="lengthCards" class="length-cards"></div></div></section>
-<section id="tripResults" tabindex="-1"><h2>Compare trips</h2><p id="cardSelection" class="notice" hidden><span id="cardSelectionText"></span> <button id="clearCardSelection" type="button">Show all lengths</button></p><p class="notice">Total (outbound-return), in CAD. Saved calendar prices; not live fares. Click a trip to view details.</p>
+<section id="tripResults" tabindex="-1"><h2>Compare trips</h2><p id="cardSelection" class="notice" hidden><span id="cardSelectionText"></span> <button id="clearCardSelection" type="button">Clear trip selection</button></p><p class="notice">Total (outbound-return), in CAD. Saved calendar prices; not live fares. Click a trip to view details.</p>
 <p id="discountNote" class="notice" hidden></p><p id="error" role="alert"></p><div class="scroll"><table><thead><tr><th scope="col" title="Nights between departure and return">Days</th><th scope="col">Departure Date</th><th scope="col">Return Date</th><th scope="col">Round-trip total</th></tr></thead><tbody id="results"></tbody></table></div>
 <div class="pager"><button id="prev" type="button">Previous</button><span id="page" aria-live="polite"></span><button id="next" type="button">Next</button></div></section>
 <footer>Source: WestJet calendars · CAD, one-way per guest; totals combine both directions. Saved prices, subject to change.</footer>
