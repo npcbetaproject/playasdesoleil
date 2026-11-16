@@ -15,6 +15,20 @@ function departureBounds(fromMonth, toMonth, today) {
   const [year, month] = toMonth.split('-').map(Number);
   return {from: [fromMonth + '-01', today].sort().pop(), to: new Date(Date.UTC(year, month, 0)).toISOString().slice(0, 10)};
 }
+function quickFilterRange(preset, now = new Date()) {
+  const periods = {april: [4, 4], january: [1, 1], summer: [7, 8]};
+  if (!Object.prototype.hasOwnProperty.call(periods, preset)) return null;
+  const {today} = departureMonths(now);
+  const [currentYear, currentMonth] = today.split('-').map(Number);
+  const [startMonth, endMonth] = periods[preset];
+  const year = currentYear + (currentMonth > endMonth ? 1 : 0);
+  const monthValue = month => year + '-' + String(month).padStart(2, '0');
+  return {
+    from: monthValue(year === currentYear ? Math.max(startMonth, currentMonth) : startMonth),
+    to: monthValue(endMonth),
+    budget: '500'
+  };
+}
 function findTrips(outbound, inbound, options) {
   const [min, max] = options.length.split('-').map(Number);
   const returns = new Map(inbound.filter(r => Number.isFinite(r.price)).map(r => [r.return_date, r.price]));
@@ -31,7 +45,7 @@ function findTrips(outbound, inbound, options) {
   }
   return trips.sort((a,b) => options.sort === 'newest' ? b.departure.localeCompare(a.departure) || a.total-b.total || a.nights-b.nights : options.sort === 'date' ? a.departure.localeCompare(b.departure) || a.total-b.total : options.sort === 'nights' ? a.nights-b.nights || a.total-b.total : a.total-b.total || a.departure.localeCompare(b.departure) || a.nights-b.nights);
 }
-if (typeof module !== 'undefined') module.exports = {findTrips, departureMonths, departureBounds};
+if (typeof module !== 'undefined') module.exports = {findTrips, departureMonths, departureBounds, quickFilterRange};
 if (typeof document !== 'undefined') {
   const $ = id => document.getElementById(id);
   const money = amount => 'CAD ' + amount.toLocaleString('en-CA');
@@ -147,6 +161,7 @@ if (typeof document !== 'undefined') {
   }
   function reset() {
     selectedNights = null; selectedPrice = null;
+    $('quickFilter').value='';
     $('length').value='4-7';
     const {months, defaultTo} = departureMonths();
     for (const id of ['from', 'to']) {
@@ -157,7 +172,28 @@ if (typeof document !== 'undefined') {
     $('from').value=months[0].value;$('to').value=defaultTo;
     $('budget').value='550';$('sort').value='date';filter();
   }
-  for (const id of ['length','from','to','budget','sort']) $(id).addEventListener('input', () => { if (id !== 'sort') { selectedNights = null; selectedPrice = null; } filter(); });
+  $('quickFilter').addEventListener('input', () => {
+    const preset = quickFilterRange($('quickFilter').value);
+    if (!preset) return;
+    // Extend the rolling month choices when the next summer ends beyond them.
+    for (const id of ['from', 'to']) {
+      const select = $(id);
+      while (select.options[select.options.length - 1].value < preset.to) {
+        const [year, month] = select.options[select.options.length - 1].value.split('-').map(Number);
+        const next = new Date(Date.UTC(year, month, 1));
+        const option = document.createElement('option');
+        option.value = next.toISOString().slice(0, 7);
+        option.textContent = next.toLocaleDateString('en-CA', {month: 'long', year: 'numeric', timeZone: 'UTC'});
+        select.append(option);
+      }
+    }
+    $('from').value = preset.from;
+    $('to').value = preset.to;
+    $('budget').value = preset.budget;
+    selectedNights = null; selectedPrice = null;
+    filter();
+  });
+  for (const id of ['length','from','to','budget','sort']) $(id).addEventListener('input', () => { if (id === 'from' || id === 'to' || id === 'budget') $('quickFilter').value = ''; if (id !== 'sort') { selectedNights = null; selectedPrice = null; } filter(); });
   $('reset').addEventListener('click',()=>{if(outbound.length)reset();});
   $('prev').addEventListener('click',()=>{if(page>0){page--;render();}});
   $('next').addEventListener('click',()=>{if((page+1)*size<trips.length){page++;render();}});
